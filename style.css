@@ -1,30 +1,138 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary: #6c2bd9;
+  --color-secondary: #ff8a00;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-text: #212529;
+  --color-accent: #f3f0ff;
+  --color-white: #ffffff;
+}
+
 body {
-  font-family: sans-serif;
-  background: #f2f2f2;
-  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
-form {
-  background: white;
-  max-width: 600px;
+
+section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-.step {
-  display: none;
+
+h1, h2, h3 {
+  color: var(--color-dark);
+  margin-bottom: 1rem;
 }
-.step.active {
-  display: block;
+
+p {
+  margin-bottom: 1rem;
 }
-input, select {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 5rem 1rem;
 }
-button {
-  margin: 10px 5px 0 0;
-  padding: 10px 20px;
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero span {
+  color: var(--color-secondary);
+}
+
+.button-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature {
+  background: var(--color-light);
+  border-radius: 8px;
+  padding: 2rem;
+  flex: 1 1 250px;
+}
+
+.pricing {
+  background-color: var(--color-accent);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.price-card {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+  border: 2px solid var(--color-primary);
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.price-card.highlight {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.testimonials {
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.testimonial {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: inline-block;
+  max-width: 300px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  background-color: #f1f1f1;
+  color: #555;
+}
+
+footer a {
+  color: var(--color-primary);
+  margin: 0 0.5rem;
+  text-decoration: none;
 }
