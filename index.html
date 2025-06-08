@@ -1,16 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registro Único</title>
-  <link href="style.css" rel="stylesheet" />
+  <title>Registro Único - Formulario</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Registro Único de Viviendas Turísticas</h1>
-    <p>Gestionamos tu inscripción de forma rápida y segura.</p>
-    <a href="mailto:info@registrounico.es" class="button">Solicitar gestión</a>
-  </main>
+  <form id="registroForm">
+    <div class="step active" id="step1">
+      <h2>Datos Personales</h2>
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="text" name="apellidos" placeholder="Apellidos" required>
+      <input type="text" name="dni" placeholder="DNI/NIE" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="button" onclick="nextStep()">Siguiente</button>
+    </div>
+
+    <div class="step" id="step2">
+      <h2>Datos de la Propiedad</h2>
+      <input type="text" name="nombre_propiedad" placeholder="Nombre de la Propiedad" required>
+      <input type="text" name="direccion" placeholder="Dirección Completa" required>
+      <input type="text" name="ciudad" placeholder="Ciudad" required>
+      <input type="text" name="provincia" placeholder="Provincia" required>
+      <input type="text" name="cp" placeholder="Código Postal" required>
+      <select name="tipo_propiedad" required>
+        <option value="">Tipo de Propiedad</option>
+        <option value="Apartamento">Apartamento</option>
+        <option value="Villa">Villa</option>
+        <option value="Casa Rural">Casa Rural</option>
+      </select>
+      <input type="number" name="habitaciones" placeholder="Nº de Habitaciones" required>
+      <input type="number" name="capacidad" placeholder="Capacidad Máxima" required>
+      <input type="text" name="licencia" placeholder="Licencia Turística (opcional)">
+      <input type="text" name="referencia" placeholder="Referencia Catastral (opcional)">
+      <input type="text" name="cru" id="cru" placeholder="CRU o IDUFIR">
+      <input type="text" name="registro" placeholder="Registro de la Propiedad correspondiente" required>
+      <button type="button" onclick="prevStep()">Anterior</button>
+      <button type="button" onclick="nextStep()">Siguiente</button>
+    </div>
+
+    <div class="step" id="step3">
+      <h2>Términos y Confirmación</h2>
+      <label><input type="checkbox" required> Acepto los términos del servicio *</label>
+      <label><input type="checkbox" required> Acepto la política de privacidad *</label>
+      <label><input type="checkbox" required> Autorizo a RegistroÚnico.es a representarme *</label>
+      <div id="resumen"></div>
+      <button type="button" onclick="prevStep()">Anterior</button>
+      <button type="submit">Proceder al Pago</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>

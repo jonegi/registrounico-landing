@@ -1,29 +1,30 @@
+
 body {
   font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #f8f8f8;
+  background: #f2f2f2;
+  padding: 20px;
 }
-
-main {
-  text-align: center;
+form {
   background: white;
-  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-
-.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff6600;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+input, select {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+button {
+  margin: 10px 5px 0 0;
+  padding: 10px 20px;
 }
